@@ -1,5 +1,4 @@
-![Vladiator](logo.png =135x110 "Vladiator")
-# [Vladiator](https://ereznagar.github.io/Vladiator/) v1.0
+![Vladiator](logo.png "Vladiator") # [Vladiator](https://ereznagar.github.io/Vladiator/) v1.0
 
 ### Validate your HTML markup using CSS
 
