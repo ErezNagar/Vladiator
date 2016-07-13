@@ -1,8 +1,6 @@
 # [Vladiator](https://ereznagar.github.io/Vladiator/)
 
-Version 1.0
-
-## Validate your HTML markup using CSS
+#### Validate your HTML markup using CSS
 CSS selectors have come a long way. Vladiator utilizes CSS3 selectors to validate your HTML markup.
 
 
