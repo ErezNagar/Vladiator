@@ -1,0 +1,21 @@
+@import "../validator";
+
+//Note: input fields do not support pseudo-elements
+
+input{
+    &:not([@{ignore}]){
+        // &:not([placeholder]), &[placeholder=""]{
+        //     // No or empty 'placeholder' attribute;
+        //     .input-validate(@warning);
+        // }
+        
+        // Empty or no 'id' attribute;
+        &:not([id]), &[id=""]{
+            .input-validate(@warning);
+        }
+        // Empty or no 'type' attribute;
+        &:not([type]), &[type=""]{
+            .input-validate(@error);
+        }
+    }
+}

@@ -1,0 +1,32 @@
+@import "../validator";
+
+a{
+    &:not([@{ignore}]){
+        &:empty{
+            .validate(@error);
+            &:after{ content: "Empty link"; }
+        }
+        
+        &:not(:empty){
+            &:not([title]){
+                .validate(@warning);
+                &:after{ content: "No 'title' attribute"; }
+            }
+            
+            &[title=""]{
+                .validate(@warning);
+                &:after{ content: "Empty 'title' attribute"; }
+            }
+            
+            &:not([href]){
+                .validate(@error);
+                &:after{ content: "No 'href' attribute"; }
+            }
+            
+            &[href=""]{
+                .validate(@error);
+                &:after{ content: "Empty 'href' attribute"; }
+            }
+        }
+    }
+}

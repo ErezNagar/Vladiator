@@ -1,0 +1,128 @@
+.message,
+a:not([ignore-validation]):empty:after,
+a:not([ignore-validation]):not(:empty):not([title]):after,
+a:not([ignore-validation]):not(:empty)[title=""]:after,
+a:not([ignore-validation]):not(:empty):not([href]):after,
+a:not([ignore-validation]):not(:empty)[href=""]:after {
+  position: absolute;
+  top: -33px;
+  left: 0;
+  padding: .25em .5em;
+  font-family: monospace;
+  color: white;
+  font-size: 14px;
+  border-radius: 4px;
+  vertical-align: top;
+}
+.arrow,
+a:not([ignore-validation]):empty:before,
+a:not([ignore-validation]):not(:empty):not([title]):before,
+a:not([ignore-validation]):not(:empty)[title=""]:before,
+a:not([ignore-validation]):not(:empty):not([href]):before,
+a:not([ignore-validation]):not(:empty)[href=""]:before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 5px;
+  border-left: 10px solid transparent;
+  border-top-style: solid;
+  border-top-width: 10px;
+  border-right: 10px solid transparent;
+}
+a:not([ignore-validation]):empty {
+  display: block;
+  position: relative;
+  text-decoration: none;
+}
+a:not([ignore-validation]):empty:before {
+  border-top-color: #c0392b;
+}
+a:not([ignore-validation]):empty:after {
+  background-color: #c0392b;
+}
+a:not([ignore-validation]):empty:after {
+  content: "Empty link";
+}
+a:not([ignore-validation]):not(:empty):not([title]) {
+  display: block;
+  position: relative;
+  text-decoration: none;
+}
+a:not([ignore-validation]):not(:empty):not([title]):before {
+  border-top-color: #f1c40f;
+}
+a:not([ignore-validation]):not(:empty):not([title]):after {
+  background-color: #f1c40f;
+}
+a:not([ignore-validation]):not(:empty):not([title]):after {
+  content: "No 'title' attribute";
+}
+a:not([ignore-validation]):not(:empty)[title=""] {
+  display: block;
+  position: relative;
+  text-decoration: none;
+}
+a:not([ignore-validation]):not(:empty)[title=""]:before {
+  border-top-color: #f1c40f;
+}
+a:not([ignore-validation]):not(:empty)[title=""]:after {
+  background-color: #f1c40f;
+}
+a:not([ignore-validation]):not(:empty)[title=""]:after {
+  content: "Empty 'title' attribute";
+}
+a:not([ignore-validation]):not(:empty):not([href]) {
+  display: block;
+  position: relative;
+  text-decoration: none;
+}
+a:not([ignore-validation]):not(:empty):not([href]):before {
+  border-top-color: #c0392b;
+}
+a:not([ignore-validation]):not(:empty):not([href]):after {
+  background-color: #c0392b;
+}
+a:not([ignore-validation]):not(:empty):not([href]):after {
+  content: "No 'href' attribute";
+}
+a:not([ignore-validation]):not(:empty)[href=""] {
+  display: block;
+  position: relative;
+  text-decoration: none;
+}
+a:not([ignore-validation]):not(:empty)[href=""]:before {
+  border-top-color: #c0392b;
+}
+a:not([ignore-validation]):not(:empty)[href=""]:after {
+  background-color: #c0392b;
+}
+a:not([ignore-validation]):not(:empty)[href=""]:after {
+  content: "Empty 'href' attribute";
+}
+input:not([ignore-validation]):not([id]),
+input:not([ignore-validation])[id=""] {
+  border: 1px solid #f1c40f;
+  box-shadow: 0 0 12px 2px #f1c40f;
+}
+input:not([ignore-validation]):not([type]),
+input:not([ignore-validation])[type=""] {
+  border: 1px solid #c0392b;
+  box-shadow: 0 0 12px 2px #c0392b;
+}
+img:not([ignore-validation]):not([alt]),
+img:not([ignore-validation])[alt=""] {
+  border: 1px solid #f1c40f;
+  box-shadow: 0 0 12px 2px #f1c40f;
+}
+img:not([ignore-validation]):not([title]),
+img:not([ignore-validation])[title=""] {
+  border: 1px solid #f1c40f;
+  box-shadow: 0 0 12px 2px #f1c40f;
+}
+img:not([ignore-validation]):not([src]),
+img:not([ignore-validation])[src=""] {
+  border: 1px solid #c0392b;
+  box-shadow: 0 0 12px 2px #c0392b;
+}
+
+/*# sourceMappingURL=vladiator.css.map */

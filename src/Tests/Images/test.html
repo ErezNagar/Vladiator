@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Vladiator - Images Test</title>
+        <link rel="stylesheet" href="../../vladiator.css">
+        <!-- <link rel="stylesheet" href="test.css"> -->
+        <style>
+            img{
+                margin: 2em 0;
+                height: 110px;
+                width: 135px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Vladiator - Images Test</h1>
+
+        <!-- <img alt="sample" src="http://www.techinsights.com/uploadedImages/Public_Website/Content_-_Primary/Teardowncom/Sample_Reports/sample-icon.png" style="width: 50px; height: 50px;">
+        <img alt="" src="http://www.techinsights.com/uploadedImages/Public_Website/Content_-_Primary/Teardowncom/Sample_Reports/sample-icon.png" style="width: 50px; height: 50px;">
+        <img alt src="http://www.techinsights.com/uploadedImages/Public_Website/Content_-_Primary/Teardowncom/Sample_Reports/sample-icon.png" style="width: 50px; height: 50px;">
+        <img src="http://www.techinsights.com/uploadedImages/Public_Website/Content_-_Primary/Teardowncom/Sample_Reports/sample-icon.png" style="width: 50px; height: 50px;">
+        <img src="" style="width: 50px; height: 50px;">
+        <img src style="width: 50px; height: 50px;">
+        <img style="width: 50px; height: 50px;"> -->
+
+        <section>
+            <code>&ltimg /&gt</code>, should display error validation:
+            <img />
+        </section>
+
+        <section>
+            <code>&ltimg src /&gt</code>, should display error validation:
+            <img src />
+        </section>
+
+        <section>
+            <code>&ltimg src="" /&gt</code>, should display error validation:
+            <img src='' />
+        </section>
+
+        <section>
+            <code>&ltimg src="src" /&gt</code>, should display warning validation:
+            <img src="../../logo.png" />
+        </section>
+
+        <section>
+            <code>&ltimg srcset /&gt</code>, should display error validation:
+            <img srcset />
+        </section>
+
+        <section>
+            <code>&ltimg srcset="" /&gt</code>, should display error validation:
+            <img srcset="../../logo.png" />
+        </section>
+
+        <section>
+            <code>&ltimg alt="" /&gt</code>, should display error validation:
+            <img alt />
+        </section>
+
+        <section>
+            <code>&ltimg alt="" /&gt</code>, should display error validation:
+            <img alt="" />
+        </section>
+
+        <section>
+            <code>&ltimg src="#" alt="#" /&gt</code>, should display warning validation:
+            <img src="../../logo.png" alt="Vladiator" />
+        </section>
+
+        <section>
+            <code>&ltimg ignore-validation/&gt</code>, should be ignored:
+            <img ignore-validation/>
+        </section>
+
+        <section>
+            <code>&ltimg src="#" alt="#" ignore-validation /&gt</code>, should be ignored"
+            <img src alt ignore-validation />
+        </section>
+
+    </body>
+</html>

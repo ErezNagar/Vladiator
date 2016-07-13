@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="description" content="Validate your HTML markup using CSS">
+        <meta name="author" content="Erez Nagar">
+        <meta charset="utf-8">
+        <title>Vladiator</title>
+        <link rel="stylesheet" href="vladiator.css">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header class="hero">
+            <img src="logo.png" alt="Vladiator" ignore-validation />
+            <h1>Vladiator</h1>
+            <p>Validate your HTML markup using CSS</p>
+            <p class="version">A bloody experiment currently at v1.0</p>
+        </header>
+
+        <main>
+            <h2>
+                Your HTML is the arena, our CSS3 is the sword
+            </h2>
+            <p>CSS selectors have come a long way. Vladiator utilizes CSS3 selectors to validate your HTML markup.</p>
+        </main>
+
+        <section class="alt">
+            <div class="sample alt">
+                <code>
+                    <span class="com">// Simply add Vladiator as a CSS style to your HTML document</span>
+                    <br>
+                    <br>
+                    &lt<span class="el">link</span> <span class="attr">rel=<span class="val">"stylesheet"</span></span> <span class="attr">href=<span class="val">"vladiator.css"</span></span>&gt
+                </code>
+                <div class="output">
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="sample">
+                <code>
+                    <span class="com">// Absence of high-priority attributes yields
+                    <br>
+                    // validation error</span>
+                    <br>
+                    <br>
+                    &lt<span class="el">a</span>&gtLink 1&lt/<span class="el">a</span>&gt
+                </code>
+                <div class="output">
+                    <a>Link 1</a>
+                </div>
+            </div>
+            <div class="sample">
+                <code>
+                    <span class="com">// Same with empty attributes</span>
+                    <br>
+                    <br>
+                    &lt<span class="el">a</span> <span class="attr">href</span>&gtLink 2&lt/<span class="el">a</span>&gt
+                </code>
+                <div class="output">
+                    <a href>Link 2</a>
+                </div>
+            </div>
+            <div class="sample">
+                <code>
+                    <span class="com">// This is still invalid</span>
+                    <br>
+                    <br>
+                    &lt<span class="el">a</span> <span class="attr">href=<span class="val">""</span></span>&gtLink 3&lt/<span class="el">a</span>&gt
+                </code>
+                <div class="output">
+                    <a href="">Link 3</a>
+                </div>
+            </div>
+            <div class="sample">
+                <code>
+                    <span class="com">// Second-priority attributes yield validation warning</span>
+                    <br>
+                    <br>
+                    &lt<span class="el">a</span> <span class="attr">href=<span class="val">"..."</span></span>&gtLink 4&lt/<span class="el">a</span>&gt
+                </code>
+                <div class="output">
+                    <a href="...">Link 4</a>
+                </div>
+            </div>
+            <div class="sample">
+                <code>&lt<span class="el">a</span> <span class="attr">href=<span class="val">"..."</span></span> <span class="attr">title</span>&gtLink 5&lt/<span class="el">a</span>&gt</code>
+                <div class="output">
+                    <a href="..." title>Link 5</a>
+                </div>
+            </div>
+            <div class="sample">
+                <code>&lt<span class="el">a</span> <span class="attr">href=<span class="val">"..."</span></span> <span class="attr">title=<span class="val">"A link"</span></span>&gtA valid link&lt/<span class="el">a</span>&gt</code>
+                <div class="output">
+                    <a href="..." title="Link 6">A valid link</a>
+                </div>
+            </div>
+            <div class="sample">
+                <code>
+                    <span class="com">// Specify 'ignore-validation' to ignore elements</span>
+                    <br>
+                    <br>
+                    &lt<span class="el">a</span> <span class="attr">ignore-validation</span>&gtIgnored invalid link&lt/<span class="el">a</span>&gt</code>
+                <div class="output">
+                    <a ignore-validation>Ignored invalid link</a>
+                </div>
+            </div>
+        </section>
+        <section class="alt">
+            <div class="sample">
+                <code>
+                    <span class="com">// Input fields don't support pseudo-elements
+                    <br>
+                    // Switching to harpoons</span>
+                    <br>
+                    <br>
+                    &lt<span class="el">input</span> /&gt
+                </code>
+                <div class="output">
+                    <input />
+                </div>
+            </div>
+            <div class="sample">
+                <code>&lt<span class="el">input</span> <span class="attr">type=<span class="val">"text"</span></span> /&gt</code>
+                <div class="output">
+                    <input type="text" />
+                </div>
+            </div>
+            <div class="sample">
+                <code>&lt<span class="el">input</span> <span class="attr">type=<span class="val">"text"</span></span> <span class="attr">id=<span class="val">"someId"</span></span> /&gt</code>
+                <div class="output">
+                    <input type="text" id="someId" ignore-validation />
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="sample">
+                <code>&lt<span class="el">img</span> <span class="attr">width=<span class="val">"100"</span></span> <span class="attr">height=<span class="val">"100"</span></span> /&gt</code>
+                <div class="output">
+                    <img width="150" height="80" />
+                </div>
+            </div>
+            <div class="sample">
+                <code>&lt<span class="el">img</span> <span class="attr">src=<span class="val">"..."</span></span> /&gt</code>
+                <div class="output">
+                    <img src="http://dummyimage.com/80x80/000/FDD835" />
+                </div>
+            </div>
+            <div class="sample">
+                <code>&lt<span class="el">img</span> <span class="attr">src=<span class="val">"..."</span></span> <span class="attr">title=<span class="val">"An Image"</span></span> /&gt</code>
+                <div class="output">
+                    <img src="http://dummyimage.com/150x80/000/FDD835" title="An Image" />
+                </div>
+            </div>
+            <div class="sample">
+                <code>&lt<span class="el">img</span> <span class="attr">src=<span class="val">"..."</span></span> <span class="attr">title=<span class="val">"An Image"</span></span> <span class="attr">alt=<span class="val">"placeholder"</span></span> /&gt</code>
+                <div class="output">
+                    <img src="http://dummyimage.com/100/000/FDD835" title="An Image" alt="placeholder" />
+                </div>
+            </div>
+        </section>
+        <footer>
+            <span>Vladiator v1.0</span><a href="https://github.com/ErezNagar/Vladiator" ignore-validation>Github</a><a href="http://caniuse.com/#feat=css-sel3" target="_blank" ignore-validation>Browser support</a>
+        </footer>
+    </body>
+</html>

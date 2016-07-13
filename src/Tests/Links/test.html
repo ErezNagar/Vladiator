@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Vladiator - Links Test</title>
+        <link rel="stylesheet" href="../../vladiator.css">
+        <!-- <link rel="stylesheet" href="test.css"> -->
+        <style>
+            a{
+                margin: 2em 0;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Vladiator - Links Test</h1>
+        <p>
+            <code>&lta&gt&lt/a&gt</code>, should display "Empty link" error message:
+            <a></a>
+
+            <code>&lta&gtLink 1&lt/a&gt</code>, should display "No 'href' attribute" error message:
+            <a>Link 1</a>
+
+            <code>&lta href&gtLink 2&lt/a&gt</code>, should display "Empty 'href' attribute" error message:
+            <a href>Link 2</a>
+
+            <code>&lta href=''&gtLink 3&lt/a&gt</code>, should display "Empty 'href' attribute" error message:
+            <a href>Link 3</a>
+
+            <code>&lta href='#'&gtLink 4&lt/a&gt</code>, should display "No 'title' attribute" warning message:
+            <a href='#'>Link 4</a>
+
+            <code>&lta href='#' title&gtLink 5&lt/a&gt</code>, should display "Empty 'title' attribute" warning message:
+            <a href='#' title>Link 5</a>
+
+            <code>&lta href='#' title=''&gtLink 6&lt/a&gt</code>, should display "Empty 'title' attribute" warning message:
+            <a href='#' title=''>Link 6</a>
+
+            <code>&lta href='#' title='#'&gtLink 7&lt/a&gt</code>, should be valid
+            <a href='#' title='#'>Link 7</a>
+
+            <code>&lta ignore-validation&gtLink 8&lt/a&gt</code>, should be ignored
+            <a ignore-validation>Link 8</a>
+
+            <code>&lta href='#' ignore-validation&gtLink 9&lt/a&gt</code>, should be ignored
+            <a href ignore-validation>Link 9</a>
+        </p>
+    </body>
+</html>

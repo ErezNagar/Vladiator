@@ -1,0 +1,27 @@
+@import "../validator";
+
+//Note: img tag do not support pseudo-elements
+
+img{
+    &:not([@{ignore}]){
+        // Empty or no 'alt' attribute
+        &:not([alt]), &[alt=""]{
+            .input-validate(@warning);
+        }
+        
+        // Empty or no 'title' attribute
+        &:not([title]), &[title=""]{
+            .input-validate(@warning);
+        }
+        
+        // Empty or no 'srcset' attribute
+        // &:not([srcset]), &[srcset=""]{
+        //     .input-validate(@warning)
+        // }
+        
+        // Empty or no 'src' attribute
+        &:not([src]), &[src=""]{
+            .input-validate(@error);
+        }
+    }
+}

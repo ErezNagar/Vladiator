@@ -1,0 +1,112 @@
+{
+	"files": {
+		"vladiator.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "vladiator.css",
+					"options": {
+						"compress": true,
+						"ieCompat": false,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourceMap": true,
+						"sourcemap": false
+					}
+				}
+			],
+			"sources": [
+				"validator.less",
+				"colors.less",
+				"Elements/links.less",
+				"Elements/inputs.less",
+				"Elements/images.less"
+			]
+		},
+		"style.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "style.less",
+					"options": {
+						"compress": false,
+						"ieCompat": false,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourceMap": true,
+						"sourcemap": false
+					}
+				}
+			],
+			"sources": [
+				"style.less"
+			]
+		},
+		"css.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "css.css",
+					"options": {
+						"compress": false,
+						"ieCompat": false,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourceMap": true,
+						"sourcemap": false
+					}
+				}
+			],
+			"sources": [
+				"css.less"
+			]
+		},
+		"styles.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "styles.css",
+					"options": {
+						"compress": true,
+						"ieCompat": false,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourceMap": true,
+						"sourcemap": false
+					}
+				}
+			],
+			"sources": [
+				"styles.less"
+			]
+		},
+		"src/vladiator.less": {
+			"engines": [
+				{
+					"compiler": "less",
+					"output": "../vladiator.css",
+					"options": {
+						"compress": false,
+						"ieCompat": false,
+						"strictMath": false,
+						"strictUnits": false,
+						"javascriptEnabled": false,
+						"sourceMap": true,
+						"sourcemap": true
+					}
+				}
+			],
+			"sources": [
+				"Elements/images.less",
+				"Elements/inputs.less",
+				"Elements/links.less",
+				"colors.less",
+				"validator.less"
+			]
+		}
+	}
+}

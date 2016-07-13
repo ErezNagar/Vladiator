@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Vladiator - Inputs Test</title>
+        <link rel="stylesheet" href="../../vladiator.css">
+        <!-- <link rel="stylesheet" href="test.css"> -->
+        <style>
+            input{
+                margin: 2em 0;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Vladiator - Inputs Test</h1>
+
+        <section>
+            <code>&ltinput /&gt</code> should display error validation:
+            <input />
+        </section>
+
+        <section>
+            <code>&ltinput type /&gt</code> should display error validation:
+            <input type />
+        </section>
+
+        <section>
+            <code>&ltinput type="" /&gt</code> should display error validation:
+            <input type="" />
+        </section>
+
+        <section>
+            <code>&ltinput type="text" /&gt</code> should display warning validation:
+            <input type="text" />
+        </section>
+
+        <section>
+            <code>&ltinput id /&gt</code> should display error validation:
+            <input id />
+        </section>
+
+        <section>
+            <code>&ltinput id="" /&gt</code> should display error validation:
+            <input id="" />
+        </section>
+
+        <section>
+            <code>&ltinput type="text" id="id" /&gt</code> should be valid:
+            <input type="text" id="id" />
+        </section>
+
+        <section>
+            <code>&ltinput /&gt</code> should be ignored:
+            <input ignore-validation />
+        </section>
+
+        <section>
+            <code>&ltinput type="text" id="id" /&gt</code> should be ignored:
+            <input type id ignore-validation />
+        </section>
+
+    </body>
+</html>
