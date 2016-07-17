@@ -16,14 +16,6 @@
     <body>
         <h1>Vladiator - Images Test</h1>
 
-        <!-- <img alt="sample" src="http://www.techinsights.com/uploadedImages/Public_Website/Content_-_Primary/Teardowncom/Sample_Reports/sample-icon.png" style="width: 50px; height: 50px;">
-        <img alt="" src="http://www.techinsights.com/uploadedImages/Public_Website/Content_-_Primary/Teardowncom/Sample_Reports/sample-icon.png" style="width: 50px; height: 50px;">
-        <img alt src="http://www.techinsights.com/uploadedImages/Public_Website/Content_-_Primary/Teardowncom/Sample_Reports/sample-icon.png" style="width: 50px; height: 50px;">
-        <img src="http://www.techinsights.com/uploadedImages/Public_Website/Content_-_Primary/Teardowncom/Sample_Reports/sample-icon.png" style="width: 50px; height: 50px;">
-        <img src="" style="width: 50px; height: 50px;">
-        <img src style="width: 50px; height: 50px;">
-        <img style="width: 50px; height: 50px;"> -->
-
         <section>
             <code>&ltimg /&gt</code>, should display error validation:
             <img />
@@ -41,7 +33,7 @@
 
         <section>
             <code>&ltimg src="src" /&gt</code>, should display warning validation:
-            <img src="../../logo.png" />
+            <img src="../../../logo.png" />
         </section>
 
         <section>
@@ -51,7 +43,7 @@
 
         <section>
             <code>&ltimg srcset="" /&gt</code>, should display error validation:
-            <img srcset="../../logo.png" />
+            <img srcset="../../../logo.png" />
         </section>
 
         <section>
@@ -66,7 +58,7 @@
 
         <section>
             <code>&ltimg src="#" alt="#" /&gt</code>, should display warning validation:
-            <img src="../../logo.png" alt="Vladiator" />
+            <img src="../../../logo.png" alt="Vladiator" />
         </section>
 
         <section>
